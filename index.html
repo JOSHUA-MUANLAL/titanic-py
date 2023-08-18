@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/index.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <center>
+        <div class="form">
+            <form action="http://127.0.0.1:5000/predict" method="post">
+
+                <span class="tooltip">Pclass<span class="tooltiptext">Pclass" stands for "Passenger Class." It is a categorical variable that represents the socio-economic status of a passenger.
+
+                </span></span><br><select name="pclass">
+                    <option value="1"> 1st Class</option>
+                    <option value="2"> 2nd Class</option>
+                    <option value="3"> 3rd Class </option>
+                </select><br><br>
+
+
+                SEX<br>Male<input type="radio" name="gender" value="0"> Female<input type="radio" name="gender" value="1"> <br><br>
+                Age<br><input type="number" name="age"><br><br>
+                <span class="tooltip">SibSp<span class="tooltiptext">Siblings/Spouses Aboard: Number of siblings or spouses a passenger had aboard the Titanic.</span></span>
+                 <br><input type="number" name="sibsp"><br><br>
+
+                <span class="tooltip">Parch<span class="tooltiptext">"Parch" stands for "Parents/Children Aboard." It indicates the count of parents (mother or father) and children (son or daughter) that a passenger was traveling with on the Titanic.</span></span><br><input type="number" name="parch"><br><br>
+                
+                Fare<br><input type="number" name="fare"><br><br>
+
+                <span class="tooltip">Embarked<span class="tooltiptext"> "Embarked" refers to the port at which a passenger boarded the Titanic.</span></span><br>
+                <select name="embarked">
+                    <option value="0"> Cherbourg</option>
+                    <option value="1"> Queenstown</option>
+                    <option value="2"> Southampton </option>
+                </select><br><br>
+                <input type="submit"><br><br>
+                SURVIVE : {{result}}
+
+            </form>
+        </div>
+    </center>
+    
+</body>
+</html>
