@@ -1,0 +1,70 @@
+.tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            font-size:2vmin;
+        }
+
+div.form{
+    background-color:white;
+    width:50%;
+    padding:4%;
+    opacity:0.2;
+    border-radius: 20px;
+    height:100%;
+}        
+
+form{
+    font-size: 3.5vmin;;
+    font-weight: bold;
+}
+input{
+    font-size: 2.4vmin;;
+}
+
+body{
+    background-image:url('titanic.jpeg');
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+}
+
+
+@media(max-width:600px){
+    form{
+        font-size:5vmin;
+    }
+
+    input{
+        font-size:3vmin;
+    }
+    body{
+        background-size: 100% 170%;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+        font-size:5vmin;
+    }
+}
